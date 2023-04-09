@@ -1,0 +1,97 @@
+// Client Endpoints
+
+// Task Option Endpoints
+
+// Get all task options
+GET /api/taskOptions
+
+// Get a specific task option
+GET /api/taskOptions/:taskOptionId
+
+// Create a new task option
+POST /api/taskOptions
+{
+  "size": "Small",
+  "hours": 1
+}
+
+// Update a task option's information
+PUT /api/taskOptions/:taskOptionId
+{
+  "size": "Medium",
+  "hours": 2
+}
+
+// Delete a task option
+DELETE /api/taskOptions/:taskOptionId
+
+
+// Vehicle Requirement Endpoints
+
+// Get all vehicle requirements
+GET /api/vehicleRequirements
+
+// Get a specific vehicle requirement
+GET /api/vehicleRequirements/:vehicleRequirementId
+
+// Create a new vehicle requirement
+POST /api/vehicleRequirements
+{
+  "vehicleType": "Car"
+}
+
+// Update a vehicle requirement's information
+PUT /api/vehicleRequirements/:vehicleRequirementId
+{
+  "vehicleType": "Truck"
+}
+
+// Delete a vehicle requirement
+DELETE /api/vehicleRequirements/:vehicleRequirementId
+
+
+// Task Endpoints
+
+// Get all tasks
+GET /api/tasks
+
+// Get a specific task
+GET /api/tasks/:taskId
+
+// Create a new task
+POST /api/tasks
+{
+  "user": "userId",
+  "startAddress": "addressId",
+  "endAddress": "addressId",
+  "taskOption": "taskOptionId",
+  "vehicleRequirement": "vehicleRequirementId",
+  "taskDetail": "Clean my apartment",
+  "budget": {
+    "amount": 50,
+    "currency": "USD",
+    "rate": "Flat Rate"
+  },
+  "paymentInformation": {
+    "creditCardNumber": "1234 5678 9012 3456",
+    "expirationDate": "2025-12-31",
+    "cvv": "123"
+  }
+}
+
+// Update a task's information
+PUT /api/tasks/:taskId
+{
+  "startAddress": "newAddressId",
+  "endAddress": "newAddressId",
+  "taskOption": "newTaskOptionId",
+  "vehicleRequirement": "newVehicleRequirementId",
+  "taskDetail": "Clean my house",
+  "budget": {
+    "amount": 75,
+    "currency": "USD",
+    "rate": "Hourly Rate"
+  },
+  "paymentInformation": {
+    "creditCardNumber": "9876 5432 1098 7654",
+    "expirationDate": "2026-12-
